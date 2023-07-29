@@ -1,0 +1,76 @@
+@import '../../style/media.scss';
+
+.Pagination {
+    display: flex;
+    gap: 1rem;
+
+    @include mobile {
+        gap: 5px;
+    }
+
+    .prevBtn, .nextBtn {
+        appearance: none;
+        background-color: #2ea44f;
+        border: 1px solid rgba(27, 31, 35, .15);
+        border-radius: 6px;
+        box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+        padding: 6px 16px;
+        position: relative;
+        text-align: center;
+        vertical-align: middle;
+        white-space: nowrap;
+
+        &:hover {
+            background-color: #2c974b;
+        }
+
+        &:disabled {
+            background-color: #94d3a2;
+            border-color: rgba(27, 31, 35, .1);
+            color: rgba(255, 255, 255, .8);
+            cursor: default;
+        }
+    }
+
+    .PaginationNumbers {
+        background-color: #FAFBFC;
+        padding: 10px;
+        border: 1px solid rgba(27, 31, 35, 0.15);
+        border-radius: 6px;
+        color: #24292E;
+        font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        cursor: pointer;
+
+        &_active {
+            background-color: #1899D6;
+            border-radius: 6px;
+            border: solid transparent;
+            color: #24292E;
+            font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            cursor: pointer;
+        }
+    }
+
+    .paginationPlaceholder {
+        width: 30px;
+        height: 30px;
+        color: transparent;
+        background-image: var(--placeholder-image);
+        background-size: var(--placeholder-size);
+        animation: var(--placeholder-animation);
+        
+    }
+}

@@ -1,0 +1,15 @@
+@import '../../style/media.scss';
+
+:root {
+    --content-wrapper-width: 1400px;
+}
+
+.ContentWrapper {
+    max-width: var(--content-wrapper-width);
+    padding-inline: 32px;
+    margin-inline: auto;
+
+    @include mobile {
+        padding-inline: 0px;
+    }
+}
