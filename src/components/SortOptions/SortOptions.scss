@@ -1,0 +1,11 @@
+.SortOptions {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 1rem;
+    margin-block-end: 1rem;
+
+    p {
+        margin-block: 0;
+    }
+}

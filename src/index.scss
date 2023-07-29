@@ -1,0 +1,13 @@
+:root {
+    //Placeholder
+    --placeholder-gradient-color: #d9d9d9;
+    --placeholder-image: linear-gradient(to right, #ebebeb 0, var(--placeholder-gradient-color) 15%, #ebebeb 30%);
+    --placeholder-size: 1200px 100%;
+    --placeholder-animation: placeholderAnimation 2s linear infinite;
+}
+
+@keyframes placeholderAnimation {
+    from { background-position: -1200px 0; }
+
+    to { background-position: 1200px 0; }
+}

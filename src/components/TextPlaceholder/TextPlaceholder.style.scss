@@ -1,0 +1,54 @@
+.TextPlaceholder {
+    pointer-events: none;
+    margin-block-start: 2px;
+
+    &.short::after {
+        content: 'aaaaaaaaaaaaa';
+        color: transparent;
+        background-image: var(--placeholder-image);
+        background-size: var(--placeholder-size);
+        animation: var(--placeholder-animation);
+
+        // @include mobile {
+        //     content: 'aaaaaaaa';
+        // }
+    }
+
+    &.medium::after {
+        content: 'aaaaaaaaaaaaaaaaaaaaaaaaaa';
+        color: transparent;
+        background-image: var(--placeholder-image);
+        background-size: var(--placeholder-size);
+        animation: var(--placeholder-animation);
+        word-wrap: break;
+
+        // @include mobile {
+        //     content: 'aaaaaaaaaaaaaaaa';
+        // }
+    }
+
+    &.long::after {
+        content: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa';
+        color: transparent;
+        background-image: var(--placeholder-image);
+        background-size: var(--placeholder-size);
+        animation: var(--placeholder-animation);
+
+        // @include mobile {
+        //     content: 'aaaaaaaaaaaaaaaaaaaaaaaa';
+        // }
+    }
+
+    &.paragraph::after {
+        content: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa';
+        color: transparent;
+        background-image: var(--placeholder-image);
+        background-size: var(--placeholder-size);
+        animation: var(--placeholder-animation);
+        word-break: break-all;
+
+        // @include mobile {
+        //     content: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa';
+        // }
+    }
+}
