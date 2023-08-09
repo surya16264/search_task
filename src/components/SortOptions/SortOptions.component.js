@@ -7,7 +7,7 @@ export const SortOptions = (props) => {
 
   return (
     <div className='SortOptions'>
-        <p className='SortLabel'>sort</p>
+        <p className='SortLabel'>sort:</p>
         {
             !isLoading ?
             <select placeholder='Select..' className='DropdownContainer'>

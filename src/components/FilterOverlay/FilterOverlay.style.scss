@@ -36,10 +36,6 @@
                 padding-block: 15px;
                 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
                 // border-bottom: 1px solid #e4e4e4;
-
-                @include mobile {
-                    padding-block: 5px;
-                }
     
                 &:first-child {
                     border-top: 1px solid #e4e4e4;
@@ -56,6 +52,87 @@
                 }
             }
     
+            .FilterOptions {
+                display: none;
+    
+                &_expanded {
+                    display: block;
+    
+                    .FilterOption {
+                        display: flex;
+                        gap: 7px;
+                        padding: 7px;
+    
+                        label {
+                            text-transform: capitalize;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .Overlay {
+        .FilterOverlay-Wrapper {
+            display: none;
+        }
+    }
+
+    .Overlay_isVisible {
+        z-index: 801;
+        inset-inline-start: 0; 
+        transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 10px -5px, rgba(0, 0, 0, 0.14) 0px 16px 24px 2px, rgba(0, 0, 0, 0.12) 0px 6px 30px 5px;
+        position: fixed;
+        background: rgba(0,0,0,.3764705882352941) 0 0 no-repeat padding-box;
+        inset-block-start: 0;
+        width: 100%;
+        overflow: scroll;
+        overflow-x: hidden;
+        height: 100%; 
+
+        .FilterOverlay-Wrapper {
+            position: absolute;
+            inset-block-start: 0;
+            width: 75%;
+            height: 100vh;
+            padding: 24px;
+            inset-inline-start: 0;
+            background-color: #fff;
+
+            .FilterHead {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                svg {
+                    fill: #000;
+                    position: absolute;
+                    top: 10px;
+                    right: 20px;
+                }
+            }
+
+            .FilterName {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 16px;
+                font-weight: 500;
+                padding-block: 15px;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                // border-bottom: 1px solid #e4e4e4;
+    
+                &:first-child {
+                    border-top: 1px solid #e4e4e4;
+                }
+            
+                p {
+                    margin-block: 0px;
+                    white-space: nowrap;
+                }
+            }
+
             .FilterOptions {
                 display: none;
     

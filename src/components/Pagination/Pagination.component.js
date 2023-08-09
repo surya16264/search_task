@@ -2,10 +2,8 @@ import './Pagination.scss';
 
 export const Pagination = (props) => {
     const { dispatch, product: { currentPage, isLoading } } = props;
-    console.log(props);
-
+    
     const setCurrentPage = (value) => {
-        console.log(value);
         dispatch({
             type: 'SET_CURRENT_PAGE',
             page: value

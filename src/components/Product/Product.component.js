@@ -11,7 +11,7 @@ const Product = (props) => {
             return (
                 <div className='Product-ImageBlock'>
                     <div
-                        className={ isLoading ? 'Image_placeholder' : 'Image' }
+                        className={ 'Image_placeholder' }
                         src={ image_url || '' }
                         alt={ name }
                         title={ name }

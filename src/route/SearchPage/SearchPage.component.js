@@ -14,17 +14,8 @@ const SearchPage = (props) => {
         const { state: { searchData: { details = [] } } } = props;
 
         if(details.length === 0) {
-            return Array.from(
-                { length: 10 },
-                (_, i) => {
-                    return (
-                        <Product
-                            key={ i }
-                            isLoading
-                            product={ {} }
-                        />
-                    );
-                }
+            return (
+                <h2>No data found.</h2>
             );
         }
 

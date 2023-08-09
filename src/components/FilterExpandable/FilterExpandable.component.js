@@ -6,30 +6,32 @@ export const FilterExpandable = (props) => {
 
   const [expand, setExpand] = useState(false);
 
-  const handleExpandOptions = () => {
-    setExpand(!expand);
+  const handleExpandOptions = (e) => {
+    if (e.target.className === 'FilterName') {
+        setExpand(!expand);
+    }
   };
 
   const renderfilterOption = () => {
-    const option = items?.map((option) => {
-        return (
-            <div className='FilterOption'>
-                <input 
-                    type='checkbox'
-                    value={ option.name }
-                    id={ option.id }
-                />
-                <label id={ option.id }>{option.name}</label>
-            </div>
-        );
-    });
+        const option = items?.map((option) => {
+            return (
+                <div className='FilterOption'>
+                    <input 
+                        type='checkbox'
+                        value={ option.name }
+                        id={ option.id }
+                    />
+                    <label id={ option.id }>{option.name}</label>
+                </div>
+            );
+        });
 
-    return option;
-}
+        return option;
+    }
 
 
   return (
-    <article key={id} className='Filter' onClick={ () => handleExpandOptions() }>
+    <article key={id} className='Filter' onClick={ (e) => handleExpandOptions(e) }>
         <div className='FilterName'>
             { !isLoading ? 
             (<>
